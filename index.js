@@ -83,6 +83,7 @@ window.onbeforeunload = () => {
 
 window.onload = () => {
   document.getElementById("year").textContent = new Date().getFullYear();
+  
   setTimeout(() => {
     window.addEventListener('scroll', scroll);
     animate();

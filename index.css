@@ -414,6 +414,62 @@ h3 {
     z-index: 2;
 }
 
+.project-clients {
+    overflow: hidden;
+    padding-top: 60px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.project-clients:before,
+.project-clients:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.project-clients:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--body-color));
+}
+
+.project-clients:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--body-color));
+}
+
+.carousel {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
+  
+.carousel img {
+    height: 50px;
+    margin: 0 40px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.client-logo {
+    margin: 20px;
+    width: 80px;
+}
+
+.client-logo img {
+    max-height: 50px;
+    object-fit: contain;
+}
+
 .contact-info {
     position: relative;
     display: flex;
