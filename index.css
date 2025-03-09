@@ -41,6 +41,29 @@ html {
     background: #bbb;
 }
 
+.featured-text-card,
+.featured-name,
+.featured-text-info,
+.featured-text-btn,
+.social_icons,
+.featured-image,
+.project-box,
+.top-header,
+.about-info,
+.contact-info,
+.skills-box,
+.form-control {
+  visibility: hidden;
+}
+
+.lightray {
+    position: absolute;
+    top: 0;
+    right: -10%;
+    z-index: -999;
+    width: 40%;
+}
+
 .btn {
     font-weight: 500;
     padding: 12px 20px;
@@ -467,6 +490,7 @@ textarea {
     justify-content: center;
     background: var(--second-color);
     color: var(--color-white);
+    pointer-events: none;
 }
 .form-button > .btn:hover {
     background: var(--first-color);
@@ -500,6 +524,7 @@ footer {
     text-decoration: none;
     font-weight: 500;
     margin-inline: 20px;
+    color: var(--first-color);
 }
 .footer-social-icons {
     display: flex;
@@ -508,6 +533,9 @@ footer {
 .bottom-footer {
     font-size: 14px;
     margin-top: 10px;
+}
+.bottom-footer a {
+    color: var(--first-color);
 }
 
 @media only screen and (max-width: 1024px) {

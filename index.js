@@ -36,7 +36,8 @@ const animate = () => {
     origin: 'top',
     distance: '80px',
     duration: 2000,
-    reset: true     
+    reset: true,  
+    beforeReveal: (el) => el.style.visibility = 'visible'
   })
 
   sr.reveal('.featured-text-card',{})
@@ -54,7 +55,8 @@ const animate = () => {
     origin: 'left',
     distance: '80px',
     duration: 2000,
-    reset: true
+    reset: true, 
+    beforeReveal: (el) => el.style.visibility = 'visible'
   })
 
   srLeft.reveal('.about-info',{delay: 100})
@@ -64,16 +66,27 @@ const animate = () => {
     origin: 'right',
     distance: '80px',
     duration: 2000,
-    reset: true
+    reset: true,
+    beforeReveal: (el) => el.style.visibility = 'visible'
   })
 
   srRight.reveal('.skills-box',{delay: 100})
   srRight.reveal('.form-control',{delay: 100})
 }
 
+window.onbeforeunload = () => {
+  window.scrollTo(0, 0);
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+};
+
 window.onload = () => {
-  window.addEventListener('scroll', scroll);
-  animate();
+  document.getElementById("year").textContent = new Date().getFullYear();
+  setTimeout(() => {
+    window.addEventListener('scroll', scroll);
+    animate();
+  }, 100);
 }
 
 window.onscroll = () => {
