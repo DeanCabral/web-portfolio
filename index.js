@@ -1,15 +1,47 @@
-const sections = document.querySelectorAll('section[id]')
+window.onbeforeunload = () => {
+  window.scrollTo(0, 0);
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+};
 
-function menu(){
-  let menuBtn = document.getElementById("myNavMenu");
-
-  if(menuBtn.className === "nav-menu") menuBtn.className += " responsive";
-  else menuBtn.className = "nav-menu";
+window.onload = () => {
+  document.getElementById("year").textContent = new Date().getFullYear();
+  
+  setTimeout(() => {
+    window.addEventListener('scroll', scroll);
+    animate();
+  }, 100);
 }
 
+window.onscroll = () => {
+  const navHeader = document.getElementById("header");
+
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
+    navHeader.style.height = "70px";
+    navHeader.style.lineHeight = "70px";
+  } else {
+    navHeader.style.boxShadow = "none";
+    navHeader.style.height = "90px";
+    navHeader.style.lineHeight = "90px";
+  }
+}
+
+function menu(){
+  let menuBtn = document.getElementById("nav-menu-res");
+
+  if (menuBtn.className === "nav-menu") {
+    menuBtn.className += " responsive";
+  } else {
+    menuBtn.className = "nav-menu";
+  }
+}
+
+const sections = document.querySelectorAll('section[id]')
 const scroll = () => {
   const scrollY = window.scrollY;
-
+  
   sections.forEach(current =>{
     const sectionHeight = current.offsetHeight,
     sectionTop = current.offsetTop - 50,
@@ -72,34 +104,4 @@ const animate = () => {
 
   srRight.reveal('.skills-box',{delay: 100})
   srRight.reveal('.form-control',{delay: 100})
-}
-
-window.onbeforeunload = () => {
-  window.scrollTo(0, 0);
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-  }
-};
-
-window.onload = () => {
-  document.getElementById("year").textContent = new Date().getFullYear();
-  
-  setTimeout(() => {
-    window.addEventListener('scroll', scroll);
-    animate();
-  }, 100);
-}
-
-window.onscroll = () => {
-  const navHeader = document.getElementById("header");
-
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
-    navHeader.style.height = "70px";
-    navHeader.style.lineHeight = "70px";
-  } else {
-    navHeader.style.boxShadow = "none";
-    navHeader.style.height = "90px";
-    navHeader.style.lineHeight = "90px";
-  }
 }
