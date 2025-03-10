@@ -61,7 +61,7 @@ html {
     top: 0;
     right: -10%;
     z-index: -999;
-    width: 40%;
+    width: 50%;
 }
 
 .btn {
@@ -87,6 +87,7 @@ i {
 
 body {
     background: var(--body-color);
+    overflow-x: hidden;
 }
 .container {
     width: 100%;
@@ -97,7 +98,7 @@ nav {
     position: fixed;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 100vw;
     height: 90px;
     line-height: 90px;
     background: var(--second-color);
@@ -137,6 +138,7 @@ nav {
 }
 .nav-menu-btn {
     display: none;
+    color: white;
 }
 .nav-menu-btn i {
     font-size: 28px;
@@ -191,6 +193,9 @@ nav {
     font-weight: 600;
     color: var(--text-color-second);
     margin-block: 20px;
+}
+.featured-name p {
+    white-space: nowrap;
 }
 .typedText {
     text-transform: capitalize;
@@ -582,6 +587,9 @@ footer {
     margin-inline: 20px;
     color: var(--first-color);
 }
+.footer_menu_list a:hover {
+    color: var(--color-white);
+}
 .footer-social-icons {
     display: flex;
     gap: 30px;   
@@ -593,6 +601,8 @@ footer {
 .bottom-footer a {
     color: var(--first-color);
 }
+
+
 
 @media only screen and (max-width: 1024px) {
     .featured-text {
@@ -609,6 +619,8 @@ footer {
         display: none;
     }
     .nav-menu.responsive {
+        justify-content: flex-start;
+        align-items: self-start;
         left: 0;
     }
     .nav-menu {
@@ -618,7 +630,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: rgba(255, 255, 255, 0.7);
+        background: rgba(0, 0, 0, 0.7);
         backdrop-filter: blur(20px);
         width: 100%;
         min-height: 450px;
@@ -676,6 +688,10 @@ footer {
     .project-container {
         justify-content: center;
     }
+    .project-clients:before,
+    .project-clients:after {
+        width: 100px;
+    }
     .project-box {
         width: 80%;
     }
@@ -683,7 +699,7 @@ footer {
 
 @media only screen and (max-width: 540px) {
     .featured-name {
-        font-size: 40px;
+        font-size: 1.5rem;
     }
     .project-box {
         width: 100%;
@@ -693,5 +709,8 @@ footer {
     }
     .input-field {
         width: 100%;
+    }
+    .lightray {
+        width: 80%;
     }
 }
