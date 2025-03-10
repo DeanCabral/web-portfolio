@@ -7,6 +7,11 @@ window.onbeforeunload = () => {
 
 window.onload = () => {
   document.getElementById("year").textContent = new Date().getFullYear();
+  document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", function () {
+      menu();
+    });
+});
   
   setTimeout(() => {
     window.addEventListener('scroll', scroll);
