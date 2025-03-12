@@ -618,6 +618,7 @@ footer {
         justify-content: flex-start;
         align-items: self-end;
         opacity: 1;
+        pointer-events: auto;
     }
     .nav-menu {
         position: fixed;
@@ -625,13 +626,14 @@ footer {
         left: 0;
         opacity: 0;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: self-end;
         background: rgba(0, 0, 0, 0.7);
         backdrop-filter: blur(20px);
         width: 100vw;
         height: 100vh;
         transition: .3s;
+        pointer-events: none;
     }
     .nav_menu_list {
         flex-direction: column;
