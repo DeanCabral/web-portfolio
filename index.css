@@ -386,6 +386,7 @@ h3 {
     background: var(--second-color);
     border-radius: 20px;
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    border: 0 solid var(--first-color);
 }
 .project-box > i {
     font-size: 50px;
@@ -405,6 +406,9 @@ h3 {
     height: 100%;
     transition: .4s;
     z-index: 1;
+}
+.project-box:hover {
+    border: 1px solid var(--first-color);
 }
 .project-box:hover.project-box::after,
 .contact-info:hover.contact-info::after {
@@ -485,6 +489,7 @@ h3 {
     background: var(--second-color);
     border-radius: 10px;
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    border: 0 solid var(--first-color);
 }
 .contact-info > h2 {
     color: var(--color-white);
@@ -499,6 +504,9 @@ h3 {
 }
 .contact-info p > i {
     font-size: 18px;
+}
+.contact-info:hover {
+    border: 1px solid var(--first-color);
 }
 .contact-info::after {
     background: var(--third-color);
