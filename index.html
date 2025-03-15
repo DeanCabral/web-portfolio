@@ -37,6 +37,10 @@
                         <div class="circle"></div>
                     </li>
                     <li class="nav_list">
+                        <a href="#testimonials" class="nav-link">Testimonials</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
                         <a href="#contact" class="nav-link">Contact</a>
                         <div class="circle"></div>
                     </li>
@@ -189,10 +193,61 @@
                 </div>
             </section>
 
+            <section class="section" id="testimonials">
+                <div class="top-header">
+                    <h1>Testimonials</h1>
+                    <span>See what my colleagues have to say about working with me.</span>
+                </div>
+                <div class="row testimonial-row">
+                    <div class="testimonial-col">
+                        <div class="testimonial-container">
+                            <div class="olive-branch"></div>
+                            <p class="testimonial-text">"Dean's ability to translate complex design requirements into flawless frontend experiences is unmatched. His collaborative approach and technical expertise made our project delivery seamless."</p>
+                            <p class="testimonial-author">Employee</p>
+                            <div class="rating">
+                                <i class="uil uil-star"></i>
+                                <i class="uil uil-star"></i>
+                                <i class="uil uil-star"></i>
+                                <i class="uil uil-star"></i>
+                                <i class="uil uil-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-col">
+                        <div class="testimonial-container">
+                            <div class="olive-branch"></div>
+                            <p class="testimonial-text">"Working with Dean was a game-changer for our AR campaign. His technical prowess combined with creative problem-solving delivered an immersive experience that exceeded our expectations."</p>
+                            <p class="testimonial-author">Employee</p>
+                            <div class="rating">
+                                <i class="uil uil-star"></i>
+                                <i class="uil uil-star"></i>
+                                <i class="uil uil-star"></i>
+                                <i class="uil uil-star"></i>
+                                <i class="uil uil-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-col">
+                        <div class="testimonial-container">
+                            <div class="olive-branch"></div>
+                            <p class="testimonial-text">"Dean consistently delivers clean, efficient code that performs beautifully across all devices. His attention to detail and commitment to quality have made him an invaluable asset to our team."</p>
+                            <p class="testimonial-author">Employee</p>
+                            <div class="rating">
+                                <i class="uil uil-star"></i>
+                                <i class="uil uil-star"></i>
+                                <i class="uil uil-star"></i>
+                                <i class="uil uil-star"></i>
+                                <i class="uil uil-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="section" id="contact">
                 <div class="top-header">
                     <h1>Get in touch</h1>
-                    <span>Do you want to reach out? Feel free to contact me here</span>
+                    <span>Do you want to reach out? Feel free to contact me here.</span>
                 </div>
                 <div class="row">
                     <div class="col">
@@ -204,16 +259,19 @@
                     </div>
                     <div class="col">
                         <div class="form-control">
-                            <div class="form-inputs">
-                                <input type="text" class="input-field" placeholder="Name">
-                                <input type="text" class="input-field" placeholder="Email">
-                            </div>
-                            <div class="text-area">
-                                <textarea placeholder="Message"></textarea>
-                            </div>
-                            <div class="form-button">
-                                <button class="btn">Send <i class="uil uil-message"></i></button>
-                            </div>
+                            <form id="contactForm">
+                                <div class="form-inputs">
+                                    <input type="text" class="input-field" placeholder="Name" name="name">
+                                    <input type="text" class="input-field" placeholder="Email" name="email">
+                                </div>
+                                <div class="text-area">
+                                    <textarea placeholder="Message" name="message"></textarea>
+                                </div>
+                                <div class="error-message" id="errorMessage"></div>
+                                <div class="form-button">
+                                    <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
