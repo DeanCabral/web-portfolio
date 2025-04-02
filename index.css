@@ -101,7 +101,7 @@ nav {
     padding-inline: 9vw;
     transition: .3s;
     z-index: 100;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.75);
 }
 
 .nav-logo {
