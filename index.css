@@ -168,7 +168,7 @@ nav {
 }
 
 .spotlight {
-    position: absolute; /* Changed from absolute to fixed */
+    position: absolute;
     width: 150vw;
     height: 25vh;
     background: linear-gradient(
@@ -184,7 +184,36 @@ nav {
     right: -75vw;
     z-index: -1;
     pointer-events: none;
-  }
+}
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #1c1d1f;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    border-radius: 25px;
+    box-shadow: 0px 6px 10px rgba(0,0,0,0.8);
+    opacity: 0;
+    transition: opacity 0.5s ease, bottom 0.5s ease;
+    z-index: 9999;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px;
+}
+
+.toast.hide {
+    opacity: 0;
+    bottom: 30px;
+}
   
 .wrapper {
     padding-inline: 10vw;
@@ -776,6 +805,11 @@ footer {
     100% {
         transform: translateX(-100%);
     }
+}
+
+@keyframes fade-out {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(0.5); }
 }
 
 .carousel {
