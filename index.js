@@ -183,14 +183,15 @@ const animate = () => {
 
 function toast(message) {
     const toast = document.getElementById("toast");
+    const gradient = document.getElementById("bottom-gradient");
+
     toast.textContent = message;
+
     toast.classList.add("show");
-    
-    setTimeout(() => {
-        toast.classList.add("hide");
-    }, 2500); 
+    gradient.classList.add("show");
 
     setTimeout(() => {
         toast.classList.remove("show", "hide");
+        gradient.classList.remove("show", "hide");
     }, 3000);
 }
