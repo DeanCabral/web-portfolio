@@ -794,6 +794,8 @@ footer {
 
 .middle-footer .footer-menu {
     display: flex;
+    width: 25vw;
+    justify-content: space-evenly;
 }
 
 .footer_menu_list {
@@ -803,7 +805,6 @@ footer {
 .footer_menu_list a {
     text-decoration: none;
     font-weight: 500;
-    margin-inline: 20px;
     color: var(--first-color);
 }
 
@@ -981,6 +982,11 @@ footer {
     }
     .testimonial-container {
         margin-bottom: 30px;
+    }
+    .middle-footer .footer-menu {
+        display: flex;
+        width: 100vw;
+        justify-content: space-evenly;
     }
 }
 
