@@ -952,10 +952,7 @@ footer {
         margin-top: 65px;
     }
     .scroll-btn {
-        height: 35px;
-        width: 100px;
-        bottom: 1vh;
-        font-size: 0.75rem;
+        display: none;
     }
     .image, .image img {
         width: 150px;
